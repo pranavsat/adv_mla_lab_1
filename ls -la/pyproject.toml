@@ -1,0 +1,32 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "git init"
+version = "0.0.1"
+description = "git remote add origin https://github.com/pranavsat/adv_mla_lab_1"
+authors = [
+  { name = "ls -la" },
+]
+
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    
+]
+requires-python = "~=3.10.0"
+
+
+[tool.ruff]
+line-length = 99
+src = ["git init"]
+include = ["pyproject.toml", "git init/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["git init"]
+force-sort-within-sections = true
+
